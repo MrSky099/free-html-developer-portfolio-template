@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deploy to Netlify or Vercel (Free) – Junior Developer Portfolio</title>
+    <meta name="description" content="Step-by-step guide to deploy this portfolio to Netlify or Vercel using the Free plan." />
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+    <style>
+      :root {
+        /* Theme aligned with style.css */
+        --bg: #0b0b0d;             /* matches --black */
+        --panel: rgba(255,255,255,0.03);
+        --text: #f8f9fa;           /* matches --white */
+        --muted: #9aa0a6;          /* matches --muted */
+        --accent: #00e6b8;         /* matches --accent */
+        --ok: #39d98a;
+        --warn: #ffd166;
+        --danger: #ef6b73;
+        --code: #0f1115;
+        --border: rgba(255,255,255,0.06);
+      }
+      html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.6; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 80px; }
+      header { margin-bottom: 24px; }
+      h1 { font-size: 28px; margin: 0 0 6px; }
+      .subtitle { color: var(--muted); margin: 0 0 16px; }
+      .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin: 16px 0; }
+      h2 { font-size: 20px; margin: 22px 0 10px; }
+      h3 { font-size: 16px; margin: 18px 0 8px; color: var(--muted); font-weight: 600; }
+      ol, ul { padding-left: 20px; }
+      .step { margin: 14px 0; }
+      .note { background: rgba(122,162,255,.08); border-left: 3px solid var(--accent); padding: 10px 12px; border-radius: 8px; color: var(--text); }
+      .warn { background: rgba(255,209,102,.08); border-left-color: var(--warn); }
+      .ok { background: rgba(57,217,138,.08); border-left-color: var(--ok); }
+      code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      pre { background: var(--code); border: 1px solid var(--border); border-radius: 10px; padding: 12px; overflow: auto; }
+      .kbd { display: inline-block; background: var(--code); border: 1px solid var(--border); border-bottom-width: 2px; padding: 2px 6px; border-radius: 6px; font-size: .95em; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+      footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Deploy this Portfolio (Netlify & Vercel)</h1>
+        <p class="subtitle">Clear, step-by-step guides for Free plans (static site, no server)</p>
+        <div class="note ok">This project is a static site: <span class="kbd">index.html</span>, <span class="kbd">style.css</span>, <span class="kbd">script.js</span>, and <span class="kbd">images/</span>. No build step is required.</div>
+      </header>
+
+      <section class="panel">
+        <h2>Quick Start (Most People)</h2>
+        <ol>
+          <li class="step"><strong>Put files at the project root</strong> (no subfolders for the main page). You should see:
+            <pre>
+index.html
+style.css
+script.js
+images/
+            </pre>
+          </li>
+          <li class="step"><strong>Choose your platform</strong>: Netlify or Vercel. Both are great and free for static sites.</li>
+          <li class="step"><strong>Use Git import</strong> for automatic redeploys on every push. If you don’t use Git, use Netlify Drag & Drop.</li>
+          <li class="step"><strong>Custom domain (optional)</strong>: Add your domain in the platform settings and follow the DNS instructions. HTTPS is automatic.</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>Prerequisites</h2>
+        <ul>
+          <li><strong>GitHub, GitLab, or Bitbucket</strong> account (for Git-based deploys)</li>
+          <li><strong>Netlify</strong> account (Free plan is enough)</li>
+          <li>Project files in a repository or a local folder</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Vercel — Deploy via Git (recommended)</h2>
+        <ol>
+          <li class="step"><strong>1) Push code to Git</strong> (GitHub, GitLab, or Bitbucket). Keep files at the repo root (see Quick Start).</li>
+          <li class="step"><strong>2) Create a Vercel project</strong>
+            <ul>
+              <li>Sign in at <a href="https://vercel.com/" target="_blank" rel="noopener">Vercel</a>.</li>
+              <li>Click <em>“Add New…” → “Project”</em> and choose <em>Import Git Repository</em>.</li>
+              <li>Authorize your Git provider and select your repository.</li>
+            </ul>
+          </li>
+          <li class="step"><strong>3) Configure project settings</strong>
+            <div class="grid">
+              <div>
+                <h3>Build & Output Settings</h3>
+                <ul>
+                  <li><strong>Framework Preset</strong>: <span class="kbd">Other</span> (no framework)</li>
+                  <li><strong>Build Command</strong>: <span class="kbd">(leave empty)</span> (no build needed)</li>
+                  <li><strong>Output Directory</strong>: <span class="kbd">/</span> (repo root with <span class="kbd">index.html</span>)</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Environment variables (optional)</h3>
+                <p>If you later add APIs that need keys, set them in <em>Settings → Environment Variables</em>.</p>
+              </div>
+            </div>
+          </li>
+          <li class="step"><strong>4) Deploy</strong>. Click <em>“Deploy”</em>. You’ll get a URL like <span class="kbd">https://your-project.vercel.app</span>.</li>
+          <li class="step"><strong>5) Continuous deployments</strong>. Every push to your default branch redeploys automatically. PRs create Preview Deployments.</li>
+        </ol>
+        <div class="note">If your files live in a subfolder (e.g., <span class="kbd">/site</span>), set <strong>Output Directory</strong> to that folder.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Vercel — Custom Domain and HTTPS</h2>
+        <ol>
+          <li class="step">Open your project in Vercel → <strong>Settings</strong> → <strong>Domains</strong>.</li>
+          <li class="step">Add your custom domain and follow the DNS instructions (Vercel DNS or your registrar via CNAME/A records).</li>
+          <li class="step">HTTPS is automatic via Let’s Encrypt on the Free plan.</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>Vercel — Rollbacks and Previews</h2>
+        <ul>
+          <li><strong>Preview Deployments</strong>: Every PR gets an isolated preview URL.</li>
+          <li><strong>Promote to Production</strong>: Use the <em>Promote</em> action to make a previous deployment live.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Vercel — Free Plan Notes</h2>
+        <ul>
+          <li>Ideal for static sites like this portfolio.</li>
+          <li>Includes HTTPS, global edge network, preview deployments, and Git-based CI.</li>
+          <li>Serverless/Edge function limits, bandwidth, and other quotas apply. See Vercel’s current limits.</li>
+        </ul>
+        <div class="note warn">Limits can change. Confirm details in Vercel’s <a href="https://vercel.com/pricing" target="_blank" rel="noopener">pricing</a> and <a href="https://vercel.com/docs" target="_blank" rel="noopener">documentation</a>.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Troubleshooting (Vercel)</h2>
+        <ul>
+          <li><strong>404 after deploy</strong> — <em>Cause</em>: Wrong Output Directory. <em>Fix</em>: Set Output Directory to the folder with <span class="kbd">index.html</span>.</li>
+          <li><strong>Missing styles/scripts</strong> — <em>Cause</em>: Incorrect paths. <em>Fix</em>: Use relative paths like <span class="kbd">./style.css</span> and <span class="kbd">./script.js</span>.</li>
+          <li><strong>Images not loading</strong> — <em>Cause</em>: Wrong filename or path. <em>Fix</em>: Check <span class="kbd">images/</span> names and case-sensitivity.</li>
+          <li><strong>Blank page</strong> — <em>Cause</em>: Moved files or broken HTML. <em>Fix</em>: Verify your <span class="kbd">index.html</span> references and run locally before deploying.</li>
+          <li><strong>Logs</strong> — Check the <em>Deployments</em> tab → select a deployment → <em>Functions/Logs</em> for details.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Netlify — Deploy via Git (recommended)</h2>
+        <ol>
+          <li class="step"><strong>1) Push code to Git</strong> (GitHub, GitLab, or Bitbucket). Keep files at the repo root (see Quick Start).</li>
+          <li class="step"><strong>2) Create a Netlify site</strong>
+            <ul>
+              <li>Sign in at <a href="https://app.netlify.com/" target="_blank" rel="noopener">Netlify</a>.</li>
+              <li>Click <em>“Add new site” → “Import an existing project”</em>.</li>
+              <li>Choose your Git provider and authorize access.</li>
+              <li>Select your repository.</li>
+            </ul>
+          </li>
+          <li class="step"><strong>3) Configure basic settings</strong>
+            <div class="grid">
+              <div>
+                <h3>Build settings</h3>
+                <ul>
+                  <li><strong>Build command</strong>: <span class="kbd">(leave empty)</span> (no build needed)</li>
+                  <li><strong>Publish directory</strong>: <span class="kbd">/</span> (repo root with <span class="kbd">index.html</span>)</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Environment variables (optional)</h3>
+                <p>If you later add APIs that need keys, set them here.</p>
+              </div>
+            </div>
+          </li>
+          <li class="step"><strong>4) Deploy</strong>. Click <em>“Deploy site”</em>. You’ll get a URL like <span class="kbd">https://your-site-name.netlify.app</span>.</li>
+          <li class="step"><strong>5) Continuous deployment</strong>. Every push to your default branch redeploys automatically. Pull requests create preview URLs.</li>
+        </ol>
+        <div class="note">If your files live in a subfolder (e.g., <span class="kbd">/site</span>), set <strong>Publish directory</strong> to that folder.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Netlify — Drag & Drop (no Git)</h2>
+        <ol>
+          <li class="step"><strong>1) Prepare</strong>: Zip your site so that <span class="kbd">index.html</span> is at the root of the zip (not inside another folder).</li>
+          <li class="step"><strong>2) Upload</strong>: Go to <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">Netlify Drop</a> and upload the zip or folder.</li>
+          <li class="step"><strong>3) Done</strong>: You get a live URL instantly. To update, re-upload or connect a Git repo later.</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>Netlify — Custom Domain and HTTPS</h2>
+        <ol>
+          <li class="step">Open your site in the Netlify dashboard → <strong>Site configuration</strong> → <strong>Domain management</strong>.</li>
+          <li class="step">Add your custom domain and follow the DNS instructions (Netlify DNS or your registrar’s DNS via CNAME/A records).</li>
+          <li class="step">Enable automatic HTTPS with Let’s Encrypt (one click). It’s free on the Free plan.</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>Netlify — Rollbacks and Previews</h2>
+        <ul>
+          <li><strong>Deploy Previews</strong>: Every PR can get an isolated preview URL.</li>
+          <li><strong>Instant Rollbacks</strong>: Promote a previous deploy to production in one click if needed.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Netlify — Free Plan Notes</h2>
+        <ul>
+          <li>Perfect for static sites like this portfolio.</li>
+          <li>Includes HTTPS, global CDN, continuous deployment, and deploy previews.</li>
+          <li>Serverless functions, build minutes, and bandwidth have Free-tier limits. Check Netlify’s current quotas in their pricing docs.</li>
+        </ul>
+        <div class="note warn">Limits can change. Always confirm the latest details in Netlify’s <a href="https://www.netlify.com/pricing/" target="_blank" rel="noopener">pricing</a> and <a href="https://docs.netlify.com/" target="_blank" rel="noopener">documentation</a>.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Troubleshooting (Netlify)</h2>
+        <ul>
+          <li><strong>404 after deploy</strong>: Ensure <span class="kbd">index.html</span> exists at your publish directory root.</li>
+          <li><strong>Missing styles/scripts</strong>: Paths in <span class="kbd">index.html</span> must match your files (e.g., <span class="kbd">./style.css</span>, <span class="kbd">./script.js</span>).</li>
+          <li><strong>Images not loading</strong>: Verify the <span class="kbd">images/</span> folder and filenames are correct and case-sensitive.</li>
+          <li><strong>Wrong publish directory</strong>: Set it to the folder that contains <span class="kbd">index.html</span>.</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>Need help? Open the site in Netlify and check <em>Deploys</em> → <em>Logs</em> for details.</p>
+      </footer>
+    </div>
+  </body>
+  </html>
