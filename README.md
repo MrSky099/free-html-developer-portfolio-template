@@ -12,8 +12,8 @@
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-00e6b8?style=for-the-badge&logo=vercel)](https://juniordev.aureathemes.com/)
 [![Download](https://img.shields.io/badge/📥_Download_Template-00e6b8?style=for-the-badge&logo=github)](https://aureathemes.com/templates/juniordev/)
-[![Stars](https://img.shields.io/github/stars/aureathemes/free-html-developer-portfolio-template?style=for-the-badge&logo=github)](https://github.com/aureathemes/free-html-developer-portfolio-template.git)
-[![Forks](https://img.shields.io/github/forks/aureathemes/free-html-developer-portfolio-template?style=for-the-badge&logo=github)](https://github.com/aureathemes/free-html-developer-portfolio-template.git)
+[![Stars](https://img.shields.io/github/stars/MrSky099/free-html-developer-portfolio-template?style=for-the-badge&logo=github)](https://github.com/MrSky099/free-html-developer-portfolio-template.git)
+[![Forks](https://img.shields.io/github/forks/MrSky099/free-html-developer-portfolio-template?style=for-the-badge&logo=github)](https://github.com/MrSky099/free-html-developer-portfolio-template.git)
 
 </div>
 
@@ -80,7 +80,7 @@
 ### Option 2: Local Development
 ```bash
 # Clone the repository
-git clone https://github.com/aureathemes/free-html-developer-portfolio-template.git
+git clone https://github.com/MrSky099/free-html-developer-portfolio-template.git
 
 # Navigate to the directory
 cd free-html-developer-portfolio-template
@@ -197,10 +197,10 @@ Looking for more templates to boost your career? Visit our main website for a co
 
 ## 📊 Template Statistics
 
-![GitHub stars](https://img.shields.io/github/stars/aureathemes/free-html-developer-portfolio-template?style=social)
-![GitHub forks](https://img.shields.io/github/forks/aureathemes/jfree-html-developer-portfolio-template?style=social)
-![GitHub issues](https://img.shields.io/github/issues/aureathemes/jfree-html-developer-portfolio-template)
-![GitHub license](https://img.shields.io/github/license/aureathemes/jfree-html-developer-portfolio-template)
+![GitHub stars](https://img.shields.io/github/stars/MrSky099/free-html-developer-portfolio-template?style=social)
+![GitHub forks](https://img.shields.io/github/forks/MrSky099/jfree-html-developer-portfolio-template?style=social)
+![GitHub issues](https://img.shields.io/github/issues/MrSky099/jfree-html-developer-portfolio-template)
+![GitHub license](https://img.shields.io/github/license/MrSky099/jfree-html-developer-portfolio-template)
 
 ---
 
@@ -224,8 +224,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 Need help? Have questions? We're here to help!
 
 - 📧 **Email**: support@aureathemes.com
-- 🐛 **Issues**: [Report bugs](https://github.com/aureathemes/free-html-developer-portfolio-template/issues)
-- 💡 **Suggestions**: [Request features](https://github.com/aureathemes/free-html-developer-portfolio-template/issues)
+- 🐛 **Issues**: [Report bugs](https://github.com/MrSky099/free-html-developer-portfolio-template/issues)
+- 💡 **Suggestions**: [Request features](https://github.com/MrSky099/free-html-developer-portfolio-template/issues)
 
 ---
 
@@ -235,9 +235,8 @@ Need help? Have questions? We're here to help!
 
 **Made with ❤️ by [aureathemes](https://aureathemes.com)**
 
-[![Follow on GitHub](https://img.shields.io/github/followers/yourusername?label=Follow&style=social)](https://github.com/aureathemes)
+[![Follow on GitHub](https://img.shields.io/github/followers/MrSky099?label=Follow&style=social)](https://github.com/MrSky099)
 [![Website](https://img.shields.io/badge/Website-aureathemes.com-00e6b8?style=for-the-badge)](https://aureathemes.com)
 [![Twitter](https://img.shields.io/twitter/follow/aureathemes?style=social)](https://x.com/aureathemes_/)
 
 </div>
-
